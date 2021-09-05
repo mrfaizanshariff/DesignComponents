@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email</title>
+  <style>
+    *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: sans-serif;
+      color:#444;
+      font-size: 24px;
+      /* Making the body to occupy the whole viewport because by default it occupies the space required for the 
+      content */
+      height: 100vh;
+      display: grid;
+      grid-template-columns:60px 250px 1fr 200px ;
+      grid-template-rows: 60px 1fr;
+      text-align: center;
+      font-weight: 700;
+    }
+    nav,aside,main,section{
+      padding-top: 24px;
+    }
+    nav{
+      background-color: #5c940d;
+      color: #fff;
+      grid-column: 1/1;
+      grid-row:1/3;
+    }
+    menu{
+      background-color: #d8f5a2;
+      color: #000;
+      grid-column: 2/-1;
+      text-align: center;
+      display: flex;
+      justify-content: first baseline;
+      align-items: center;
+      gap: 20px;
+      padding:0 40px;
+      /* padding-top: 10px; */
+    }
+    aside{
+      background-color: #91a7ff;
+      color: #fff;
+      grid-column: 4/5;
+    }
+      
+    main{
+      background-color: gray;
+      color: #fff;
+      grid-column: 3/4;
+    }
+    section{
+      background-color: dimgray;
+      color:#fff;
+      overflow: scroll;
+    }
+    .btn{
+      display: inline-block;
+      background-color: green;
+      color: #fff;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .btn:last-child{
+      background-color: darkred;
+      justify-items: flex-end;
+      margin-left: auto;
+    }
+    .emai{
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff;
+        width: 180px;
+        height: 56px;
+        background-color: maroon;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+<nav>NAV</nav> 
+<menu>
+  <button class="btn">New</button>
+  <button class="btn">Reply</button>
+  <button class="btn">Forward</button>
+  <button class="btn">Mark Unread</button>
+  <button class="btn btn--trash">Trash</button>
+</menu>
+<section>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+  <div class="emai">Email</div>
+</section>
+<main>Email View</main> 
+<aside>Additional Information</aside>
+</body>
+</html>
